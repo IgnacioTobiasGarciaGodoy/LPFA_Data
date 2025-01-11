@@ -68,7 +68,7 @@ const SideBar = ({ setPlayers }) => {
 	};
 
 	return (
-		<aside id="logo-sidebar" className="vertical-scrollbar fixed z-index top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800" aria-label="Sidebar">
+		<aside id="logo-sidebar" className="vertical-scrollbar fixed z-index top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform bg-white border-r border-gray-200 translate-x-0 dark:bg-gray-800" aria-label="Sidebar">
 			<div className="drawer-body px-2 pt-4">
 				<ul className="bg-white menu space-y-1 dark:bg-gray-800">
 
