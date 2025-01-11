@@ -68,16 +68,16 @@ const SideBar = ({ setPlayers }) => {
 	};
 
 	return (
-		<aside id="logo-sidebar" className="vertical-scrollbar fixed z-index top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0" aria-label="Sidebar">
+		<aside id="logo-sidebar" className="vertical-scrollbar fixed z-index top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800" aria-label="Sidebar">
 			<div className="drawer-body px-2 pt-4">
-				<ul className="bg-white menu space-y-1">
+				<ul className="bg-white menu space-y-1 dark:bg-gray-800">
 
 					{/* Team */}
 					<li>
 						<button
 							id="dropdownCheckboxButton"
 							data-dropdown-toggle="dropdownDefaultCheckbox"
-							className="flex items-center py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="flex items-center py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 							type="button"
 							onClick={toggleDropdown}
 						>
@@ -103,8 +103,7 @@ const SideBar = ({ setPlayers }) => {
 						{/* Dropdown menu */}
 						<div
 							id="dropdownDefaultCheckbox"
-							className={`z-10 ${isDropdownOpen ? 'block' : 'hidden'
-								} w-auto max-w-md bg-white divide-y divide-gray-100 rounded-lg shadow`}
+							className={`z-10 ${isDropdownOpen ? 'block' : 'hidden'} w-auto max-w-md bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800`}
 						>
 							<ul className="p-2 space-y-2 text-sm text-gray-700">
 								{teams.map((team, index) => (
@@ -121,7 +120,7 @@ const SideBar = ({ setPlayers }) => {
 											<label
 												htmlFor={`checkbox-item-${index}`}
 												style={{ marginLeft: '0', flex: 1, textAlign: 'left' }}
-												className="text-sm font-medium text-gray-900"
+												className="text-sm font-medium text-gray-900 dark:text-gray-300"
 											>
 												{team}
 											</label>
@@ -139,13 +138,13 @@ const SideBar = ({ setPlayers }) => {
 							id="position_select"
 							value={position}
 							onChange={(e) => setPosition(e.target.value)}
-							className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 						>
-							<option value="">Posicion</option>
-							<option value="GK">GK</option>
-							<option value="DF">DF</option>
-							<option value="MF">MF</option>
-							<option value="FW">FW</option>
+							<option className='dark:bg-gray-800' value="">Posicion</option>
+							<option className='dark:bg-gray-800' value="GK">GK</option>
+							<option className='dark:bg-gray-800' value="DF">DF</option>
+							<option className='dark:bg-gray-800' value="MF">MF</option>
+							<option className='dark:bg-gray-800' value="FW">FW</option>
 						</select>
 					</li>
 
@@ -157,7 +156,7 @@ const SideBar = ({ setPlayers }) => {
 							id="minAge_input"
 							value={minAge}
 							onChange={(e) => setMinAge(e.target.value)}
-							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 							placeholder="Edad Mínima"
 							min="0"
 						/>
@@ -168,7 +167,7 @@ const SideBar = ({ setPlayers }) => {
 							id="maxAge_input"
 							value={maxAge}
 							onChange={(e) => setMaxAge(e.target.value)}
-							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 							placeholder="Edad Máxima"
 							min="0"
 						/>
@@ -182,7 +181,7 @@ const SideBar = ({ setPlayers }) => {
 							id="minGoals_input"
 							value={minGoals}
 							onChange={(e) => setMinGoals(e.target.value)}
-							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 							placeholder="Goles Mínimos"
 							min="0"
 						/>
@@ -193,7 +192,7 @@ const SideBar = ({ setPlayers }) => {
 							id="maxGoals_input"
 							value={maxGoals}
 							onChange={(e) => setMaxGoals(e.target.value)}
-							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 							placeholder="Goles Máximos"
 							min="0"
 						/>
@@ -207,7 +206,7 @@ const SideBar = ({ setPlayers }) => {
 							id="minAssists_input"
 							value={minAssists}
 							onChange={(e) => setMinAssists(e.target.value)}
-							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 							placeholder="Asistencias Mínimas"
 							min="0"
 						/>
@@ -218,7 +217,7 @@ const SideBar = ({ setPlayers }) => {
 							id="maxAssists_input"
 							value={maxAssists}
 							onChange={(e) => setMaxAssists(e.target.value)}
-							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200"
+							className="w-full py-2 px-3 text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 dark:text-gray-300"
 							placeholder="Asistencias Máximas"
 							min="0"
 						/>
@@ -231,7 +230,7 @@ const SideBar = ({ setPlayers }) => {
 						onClick={handleSearch}
 						className="group inline-block rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
 					>
-						<span className="rounded-full bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent flex items-center justify-center">
+						<span className="rounded-full bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent flex items-center justify-center dark:bg-gray-800">
 							<Filter className="mr-2" />
 							Buscar
 						</span>

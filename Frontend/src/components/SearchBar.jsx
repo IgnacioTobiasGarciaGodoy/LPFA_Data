@@ -78,7 +78,7 @@ const SearchBar = ({ setPlayers }) => {
 				<input
 					type="search"
 					placeholder="Buscar Jugador"
-					className="w-full p-2 rounded-full bg-white text-black border-2 border-pink-500 focus:ring-0 focus:ring-transparent transition duration-300"
+					className="w-full p-2 rounded-full bg-white text-black border-2 border-pink-500 focus:ring-0 focus:ring-transparent transition duration-300 dark:bg-gray-800 dark:text-white"
 					onChange={handleSearch}
 					onKeyDown={handleKeyDown}
 					value={query}
@@ -92,7 +92,7 @@ const SearchBar = ({ setPlayers }) => {
 			</div>
 
 			{activeSearch.length > 0 && (
-				<div className="absolute top-12 p-1 bg-white text-black w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col gap-2 shadow-lg">
+				<div className="absolute top-12 p-1 bg-white text-black w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col gap-2 shadow-lg dark:bg-gray-800 dark:text-white">
 					{activeSearch.map((player, index) => (
 						<span
 							key={player.id}
